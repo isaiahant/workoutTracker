@@ -1,17 +1,17 @@
-const {model, Schema} = require('mongoose')
-const { Workout } = require('.')
+const { model, Schema } = require('mongoose')
+
 
 const Plan = new Schema({
   day: {
-type: Date,
-default: () => new Date()
+    type: Date,
+    default: () => new Date()
   },
-  exercises:[
+  exercises: [
     {
       type: {
         type: String,
-      trim: true,
-      required: 'Enter an excercise type'
+        trim: true,
+        required: 'Enter an excercise type'
       },
       name: {
         type: String,
