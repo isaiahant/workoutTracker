@@ -69,7 +69,7 @@ router.get('/workouts/range', (req, res) =>{
   .catch(err => console.log(err))
 })
 
-router.delete('/workouts', (req, res) =>{
+router.delete('/workouts/:id', (req, res) =>{
   Workout.findByIdAndDelete(req.body.id)
   .then(()=> res.json(true))
   .catch(err => console.log(err))
